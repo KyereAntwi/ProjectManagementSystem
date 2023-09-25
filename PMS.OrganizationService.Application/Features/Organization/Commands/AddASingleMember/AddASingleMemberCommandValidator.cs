@@ -25,6 +25,9 @@ public class AddASingleMemberCommandValidator : AbstractValidator<AddASingleMemb
 
     private async Task<bool> OrganizationExist(AddASingleMemberCommand command, CancellationToken token)
     {
-        return await _organizationRepository.TitleAlreadyTaken(command.OrganizationId);
+        var organization = await _organizationRepository.GetByIdAsync(command.OrganizationId);
+        if (organization is not null)
+            return true;
+        return false;
     }
 }

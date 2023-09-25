@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <PackageReference Include="AutoMapper" Version="12.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
       <PackageReference Include="FluentValidation" Version="11.7.1" />
       <PackageReference Include="MediatR" Version="12.1.1" />
       <PackageReference Include="Microsoft.AspNetCore.Http" Version="2.2.2" />
@@ -19,8 +20,6 @@
       <ProjectReference Include="..\PMS.OrganizationService.Domain\PMS.OrganizationService.Domain.csproj" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="Features\Organization\Queries\" />
-    </ItemGroup>
+
 
 </Project>

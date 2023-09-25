@@ -33,38 +33,36 @@ public class AddMultipleMembersCommandHandler : IRequestHandler<AddMultipleMembe
             {
                 response.ValidationErrors.Add(error.ErrorMessage);
             }
-        }
-        
-        if (!response.Success)
+
+            response.StatusCode = 400;
             return response;
+        }
 
         List<Member> members = new();
 
+        var organization = await _organizationRepository.GetByIdAsync(request.OrganizationId);
+
         foreach (var username in request.Members)
         {
-            members.Add(new Member()
+            var member = new Member()
             {
-                OrganizationId = request.OrganizationId,
+                Admin = false,
+                TimeStamp = DateTime.Now,
                 MemberEmail = username
-            });
-        }
-
-        try
-        {
-            var usernames = await _asyncRepository.AddMultiple(members);
-            response.StatusCode = 201;
-            response.Message = "Operation was successful";
-            response.Data = usernames;
+            };
             
-            // TODO - Send a message to the Activities Service for registering this activity
+            member.Organizations.Add(organization);
+            
+            members.Add(member);
         }
-        catch (Exception)
-        {
-            response.Success = false;
-            response.Message = "Adding members failed. Sorry! Something went wrong";
-            response.StatusCode = 500;
-        }
-
+        
+        var usernames = await _asyncRepository.AddMultiple(members);
+        response.StatusCode = 201;
+        response.Message = "Operation was successful";
+        response.Data = usernames;
+            
+        // TODO - Send a message to the Activities Service for registering this activity
+        
         return response;
     }
 }

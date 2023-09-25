@@ -37,29 +37,20 @@ public class AddASingleMemberCommandHandler : IRequestHandler<AddASingleMemberCo
             {
                 response.ValidationErrors.Add(error.ErrorMessage);
             }
+
+            response.StatusCode = 400;
         }
-        
-        if (!response.Success)
-            return response;
 
         var member = _mapper.Map<Member>(request);
-
-        try
-        {
-            var newMember = await _asyncRepository.AddAsync(member);
-            response.Success = true;
-            response.Message = "Adding member was successful";
-            response.StatusCode = 201;
-            response.Data = newMember.MemberEmail;
+        
+        var newMember = await _asyncRepository.AddAsync(member);
+        
+        response.Success = true;
+        response.Message = "Adding member was successful";
+        response.StatusCode = 201;
+        response.Data = newMember.MemberEmail;
             
-            // TODO - Send a message to the Activities Service for registering this activity
-        }
-        catch (Exception)
-        {
-            response.Success = false;
-            response.Message = "Creating organization failed. Sorry! Something went wrong";
-            response.StatusCode = 500;
-        }
+        // TODO - Send a message to the Activities Service for registering this activity
 
         return response;
     }

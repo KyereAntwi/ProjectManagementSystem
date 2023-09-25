@@ -1,0 +1,17 @@
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/bin/Debug/net7.0/PMS.OrganizationService.Application.deps.json
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/bin/Debug/net7.0/PMS.OrganizationService.Application.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/bin/Debug/net7.0/PMS.OrganizationService.Application.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/bin/Debug/net7.0/PMS.Contracts.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/bin/Debug/net7.0/PMS.OrganizationService.Domain.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/bin/Debug/net7.0/PMS.Contracts.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/bin/Debug/net7.0/PMS.OrganizationService.Domain.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.csproj.AssemblyReference.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.AssemblyInfoInputs.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.AssemblyInfo.cs
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.csproj.CoreCompileInputs.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.csproj.CopyComplete
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/refint/PMS.OrganizationService.Application.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/PMS.OrganizationService.Application.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/Debug/net7.0/ref/PMS.OrganizationService.Application.dll

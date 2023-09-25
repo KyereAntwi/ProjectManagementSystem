@@ -29,7 +29,7 @@ public class CreateOrganizationCommandValidator : AbstractValidator<CreateOrgani
 
     private async Task<bool> TitleTaken(CreateOrganizationCommand command, CancellationToken token)
     {
-        var existingTitle = await _organizationRepository.TitleAlreadyTaken(command.Title);
+        var existingTitle = await _organizationRepository.TitleAlreadyTakenAsync(command.Title);
         return existingTitle;
     }
 }

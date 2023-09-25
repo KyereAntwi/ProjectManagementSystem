@@ -1,0 +1,12 @@
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/bin/Debug/net7.0/PMS.OrganizationService.Domain.deps.json
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/bin/Debug/net7.0/PMS.OrganizationService.Domain.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/bin/Debug/net7.0/PMS.OrganizationService.Domain.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/PMS.OrganizationService.Domain.csproj.AssemblyReference.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/PMS.OrganizationService.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/PMS.OrganizationService.Domain.AssemblyInfoInputs.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/PMS.OrganizationService.Domain.AssemblyInfo.cs
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/PMS.OrganizationService.Domain.csproj.CoreCompileInputs.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/PMS.OrganizationService.Domain.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/refint/PMS.OrganizationService.Domain.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/PMS.OrganizationService.Domain.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/Debug/net7.0/ref/PMS.OrganizationService.Domain.dll

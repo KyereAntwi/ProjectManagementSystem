@@ -21,6 +21,10 @@ public class AddMultipleMembersCommandValidator : AbstractValidator<AddMultipleM
 
     private async Task<bool> OrganizationExist(AddMultipleMembersCommand command, CancellationToken cancellationToken)
     {
-        return await _organizationRepository.TitleAlreadyTaken(command.OrganizationId);
+        var organization = await _organizationRepository.GetByIdAsync(command.OrganizationId);
+
+        if (organization is not null)
+            return true;
+        return false;
     }
 }

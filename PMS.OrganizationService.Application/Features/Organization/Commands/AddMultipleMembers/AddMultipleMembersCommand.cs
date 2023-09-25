@@ -5,5 +5,5 @@ namespace PMS.OrganizationService.Application.Features.Organization.Commands.Add
 
 public record AddMultipleMembersCommand(
     IEnumerable<string> Members,
-    string OrganizationId
+    Guid OrganizationId
     ) : IRequest<BaseResponse>;

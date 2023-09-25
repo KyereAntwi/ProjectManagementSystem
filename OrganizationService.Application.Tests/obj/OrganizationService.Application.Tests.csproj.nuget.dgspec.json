@@ -1,0 +1,291 @@
+{
+  "format": 1,
+  "restore": {
+    "/Users/kyere/Desktop/ProjectManagementSystem/OrganizationService.Application.Tests/OrganizationService.Application.Tests.csproj": {}
+  },
+  "projects": {
+    "/Users/kyere/Desktop/ProjectManagementSystem/OrganizationService.Application.Tests/OrganizationService.Application.Tests.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/ProjectManagementSystem/OrganizationService.Application.Tests/OrganizationService.Application.Tests.csproj",
+        "projectName": "OrganizationService.Application.Tests",
+        "projectPath": "/Users/kyere/Desktop/ProjectManagementSystem/OrganizationService.Application.Tests/OrganizationService.Application.Tests.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/ProjectManagementSystem/OrganizationService.Application.Tests/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/PMS.OrganizationService.Application.csproj": {
+                "projectPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/PMS.OrganizationService.Application.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.12.0, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[17.5.0, )"
+            },
+            "Moq": {
+              "target": "Package",
+              "version": "[4.20.69, )"
+            },
+            "coverlet.collector": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.2.0, )"
+            },
+            "xunit": {
+              "target": "Package",
+              "version": "[2.4.2, )"
+            },
+            "xunit.runner.visualstudio": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.4.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/PMS.Contracts.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/PMS.Contracts.csproj",
+        "projectName": "PMS.Contracts",
+        "projectPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/PMS.Contracts.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/PMS.OrganizationService.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/PMS.OrganizationService.Application.csproj",
+        "projectName": "PMS.OrganizationService.Application",
+        "projectPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/PMS.OrganizationService.Application.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Application/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {
+              "/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/PMS.Contracts.csproj": {
+                "projectPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/PMS.Contracts.csproj"
+              },
+              "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/PMS.OrganizationService.Domain.csproj": {
+                "projectPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/PMS.OrganizationService.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[12.0.1, )"
+            },
+            "FluentValidation": {
+              "target": "Package",
+              "version": "[11.7.1, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[12.1.1, )"
+            },
+            "Microsoft.AspNetCore.Http": {
+              "target": "Package",
+              "version": "[2.2.2, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/PMS.OrganizationService.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/PMS.OrganizationService.Domain.csproj",
+        "projectName": "PMS.OrganizationService.Domain",
+        "projectPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/PMS.OrganizationService.Domain.csproj",
+        "packagesPath": "/Users/kyere/.nuget/packages/",
+        "outputPath": "/Users/kyere/Desktop/ProjectManagementSystem/PMS.OrganizationService.Domain/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/Users/kyere/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net7.0"
+        ],
+        "sources": {
+          "/usr/local/share/dotnet/library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net7.0": {
+            "targetAlias": "net7.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net7.0": {
+          "targetAlias": "net7.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.307/RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@ using PMS.Contracts.Responses;
 namespace PMS.OrganizationService.Application.Features.Organization.Commands.AddASingleMember;
 
 public record AddASingleMemberCommand(
-    string OrganizationId,
+    Guid OrganizationId,
     string MemberEmail,
-    bool Admin
+    bool Admin = false
     ) : IRequest<BaseResponse>;

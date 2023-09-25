@@ -1,0 +1,12 @@
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/bin/Debug/net7.0/PMS.Contracts.deps.json
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/bin/Debug/net7.0/PMS.Contracts.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/bin/Debug/net7.0/PMS.Contracts.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/PMS.Contracts.csproj.AssemblyReference.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/PMS.Contracts.GeneratedMSBuildEditorConfig.editorconfig
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/PMS.Contracts.AssemblyInfoInputs.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/PMS.Contracts.AssemblyInfo.cs
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/PMS.Contracts.csproj.CoreCompileInputs.cache
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/PMS.Contracts.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/refint/PMS.Contracts.dll
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/PMS.Contracts.pdb
+/Users/kyere/Desktop/ProjectManagementSystem/PMS.Contracts/obj/Debug/net7.0/ref/PMS.Contracts.dll
