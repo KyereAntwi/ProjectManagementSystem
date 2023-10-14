@@ -8,14 +8,7 @@ public static class MockAsyncRepository
 {
     public static Mock<IOrganizationRepository> GetOrganizationAsyncRepository()
     {
-        var OrganizationList = new List<Organization>()
-        {
-            new Organization()
-            {
-                Id = new Guid("2245fe4a-d402-451c-b9ed-9c1a04247482"),
-                Title = "Organization 1"
-            }
-        };
+        var organizationList = new List<Organization>();
         
         var mockRepo = new Mock<IOrganizationRepository>();
         
@@ -23,8 +16,10 @@ public static class MockAsyncRepository
         mockRepo.Setup(r =>
             r.AddAsync(It.IsAny<Organization>())).ReturnsAsync((Organization organization) =>
         {
-            organization.Id = new Guid("2245fe4a-d402-451c-b9ed-9c1a04247482");
-            OrganizationList.Add(organization);
+            var newOrganization =
+                Organization.Create("Sample Title", "Sample organization description", "user@example.com");
+            
+            organizationList.Add(organization);
             
             return organization;
         });
@@ -41,7 +36,7 @@ public static class MockAsyncRepository
         mockRepo.Setup(r =>
             r.GetByIdAsync(It.IsAny<Guid>())).ReturnsAsync((Guid id) =>
         {
-            var response = OrganizationList.FirstOrDefault(o => o.Id == id);
+            var response = organizationList.FirstOrDefault(o => o.Id == id);
             return response;
         });
         
@@ -49,7 +44,7 @@ public static class MockAsyncRepository
         mockRepo.Setup(r =>
             r.GetDetailsAsync(It.IsAny<Guid>())).ReturnsAsync((Guid id) =>
         {
-            var response = OrganizationList.FirstOrDefault(o => o.Id == id);
+            var response = organizationList.FirstOrDefault(o => o.Id == id);
             return response;
         });
         
@@ -57,7 +52,7 @@ public static class MockAsyncRepository
         mockRepo.Setup(r =>
             r.TitleAlreadyTakenAsync(It.IsAny<string>())).ReturnsAsync((string title) =>
         {
-            var response = OrganizationList.FirstOrDefault(o => o.Title.ToLower().Contains(title.ToLower()));
+            var response = organizationList.FirstOrDefault(o => o.Title.ToLower().Contains(title.ToLower()));
             if (response is null)
             {
                 return true;

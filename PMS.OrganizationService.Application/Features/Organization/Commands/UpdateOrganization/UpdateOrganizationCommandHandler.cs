@@ -3,7 +3,6 @@ using MediatR;
 using PMS.Contracts.Responses;
 using PMS.OrganizationService.Application.Contracts.Infrustracture;
 using PMS.OrganizationService.Application.Contracts.Persistence;
-using PMS.OrganizationService.Domain.Entities;
 
 namespace PMS.OrganizationService.Application.Features.Organization.Commands.UpdateOrganization;
 
@@ -39,24 +38,23 @@ public class UpdateOrganizationCommandHandler : IRequestHandler<UpdateOrganizati
 
             return response;
         }
-
-        var organization = _mapper.Map<Domain.Entities.Organization>(request);
-        var adddress = _mapper.Map<Address>(request);
-
-        organization.Address = adddress;
-        organization.UpdatedAt = DateTime.Now;
+        
+        Uri? bannerUrl = null;
+        Uri? loggoUrl = null;
         
         if (request.Banner is not null)
         {
-            var bannerUrl = await _fileService.UploadImage(request.Banner);
-            organization.BannerUrl = bannerUrl;
+            bannerUrl = await _fileService.UploadImage(request.Banner);
         }
 
         if (request.Logo is not null)
         {
-            var logoUrl = await _fileService.UploadImage(request.Logo);
-            organization.LogoUrl = logoUrl;
+            loggoUrl = await _fileService.UploadImage(request.Logo);
         }
+
+        var organization = Domain.Entities.Organization.Update(request.Id, request.Title!, request.Description!, loggoUrl,
+            bannerUrl, request.Address1, request.Address2, request.Address3, request.Street!, request.Region!,
+            request.Country!, request.ZipCode!, request.Telephone!);
 
         await _asyncRepository.UpdateAsync(organization);
         

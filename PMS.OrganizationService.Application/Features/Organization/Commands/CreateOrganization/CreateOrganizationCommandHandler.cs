@@ -1,5 +1,6 @@
 using AutoMapper;
 using MediatR;
+using MediatR.Wrappers;
 using PMS.Contracts.Responses;
 using PMS.OrganizationService.Application.Contracts.Infrustracture;
 using PMS.OrganizationService.Application.Contracts.Persistence;
@@ -41,36 +42,23 @@ public class CreateOrganizationCommandHandler : IRequestHandler<CreateOrganizati
 
             return response;
         }
+
+        Uri? bannerUrl = null;
+        Uri? loggoUrl = null;
         
-        var organization = _mapper.Map<Domain.Entities.Organization>(request);
-            
         if (request.Banner is not null)
         {
-            var bannerUrl = await _fileService.UploadImage(request.Banner);
-            organization.BannerUrl = bannerUrl;
+            bannerUrl = await _fileService.UploadImage(request.Banner);
         }
 
         if (request.Logo is not null)
         {
-            var logoUrl = await _fileService.UploadImage(request.Logo);
-            organization.LogoUrl = logoUrl;
+            loggoUrl = await _fileService.UploadImage(request.Logo);
         }
-            
-        organization.TimeStamp = DateTime.Now;
-        organization.UpdatedAt = DateTime.Now;
-        organization.Active = true;
 
-        var adminMember = new Member()
-        {
-            MemberEmail = request.CreatedBy,
-            TimeStamp = DateTime.Now,
-            Owner = true,
-            Admin = true
-        };
-
-        organization.Members = new List<Member>();    
-        organization.Members.Add(adminMember);
-            
+        var organization = Domain.Entities.Organization.Create(request.Title, request.Description, request.CreatedBy,
+            loggoUrl, bannerUrl);
+        
         var newOrganization = await _organizationRepository.AddAsync(organization);
             
         // TODO - Send a message to the Email service for email to be sent to owner or Admin for successful creation of organization and related tips

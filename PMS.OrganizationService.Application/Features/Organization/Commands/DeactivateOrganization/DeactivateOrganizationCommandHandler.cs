@@ -20,9 +20,8 @@ public class DeactivateOrganizationCommandHandler : IRequestHandler<DeactivateOr
         if (organization is null)
             throw new NotFoundException("Specified organization does not exist", typeof(Domain.Entities.Organization));
 
-        organization.Active = false;
-        organization.UpdatedAt = DateTime.Now;
+        var updatedOrganization = Domain.Entities.Organization.Deactivate(organization);
 
-        await _asyncRepository.UpdateAsync(organization);
+        await _asyncRepository.UpdateAsync(updatedOrganization);
     }
 }

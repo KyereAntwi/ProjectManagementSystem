@@ -6,6 +6,7 @@ namespace PMS.OrganizationService.Application.Features.Organization.Commands.Upd
 
 public record UpdateOrganizationCommand(
     Guid Id,
+    string? Title,
     string? Description,
     IFormFile? Logo,
     IFormFile? Banner,

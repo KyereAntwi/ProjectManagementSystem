@@ -56,6 +56,7 @@ public class OrganizationCommandHandlersTests
             "This the updated description",
             null,
             null,
+            Banner: null,
             "Address 1",
             "Address 2",
             null,

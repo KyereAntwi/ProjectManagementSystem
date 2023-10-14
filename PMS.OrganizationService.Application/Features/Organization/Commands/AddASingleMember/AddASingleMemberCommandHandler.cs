@@ -1,4 +1,3 @@
-using AutoMapper;
 using MediatR;
 using PMS.Contracts.Responses;
 using PMS.OrganizationService.Application.Contracts.Persistence;
@@ -8,24 +7,18 @@ namespace PMS.OrganizationService.Application.Features.Organization.Commands.Add
 
 public class AddASingleMemberCommandHandler : IRequestHandler<AddASingleMemberCommand, BaseResponse>
 {
-    private readonly IAsyncRepository<Member> _asyncRepository;
-    private readonly IOrganizationRepository _organizationRepository;
-    private readonly IMapper _mapper;
+    private readonly IOrganizationRepository _asyncRepository;
 
-    public AddASingleMemberCommandHandler(IAsyncRepository<Member> asyncRepository, 
-        IOrganizationRepository organizationRepository,
-        IMapper mapper)
+    public AddASingleMemberCommandHandler(IOrganizationRepository asyncRepository)
     {
         _asyncRepository = asyncRepository;
-        _organizationRepository = organizationRepository;
-        _mapper = mapper;
     }
     
     public async Task<BaseResponse> Handle(AddASingleMemberCommand request, CancellationToken cancellationToken)
     {
-        var validator = new AddASingleMemberCommandValidator(_organizationRepository);
         var response = new BaseResponse();
         
+        var validator = new AddASingleMemberCommandValidator();
         var validationErrors = await validator.ValidateAsync(request, cancellationToken);
         
         if (validationErrors.Errors.Count > 0)
@@ -41,14 +34,16 @@ public class AddASingleMemberCommandHandler : IRequestHandler<AddASingleMemberCo
             response.StatusCode = 400;
         }
 
-        var member = _mapper.Map<Member>(request);
-        
-        var newMember = await _asyncRepository.AddAsync(member);
+        var organization = await _asyncRepository.GetByIdAsync(request.OrganizationId);
+
+        Domain.Entities.Organization.AddMembersToOrganization(organization!,
+            new List<Member>() { Member.Create(request.MemberEmail, DateTime.UtcNow, request.Admin, false) });
+
+        await _asyncRepository.SaveChanges();
         
         response.Success = true;
         response.Message = "Adding member was successful";
         response.StatusCode = 201;
-        response.Data = newMember.MemberEmail;
             
         // TODO - Send a message to the Activities Service for registering this activity
 
